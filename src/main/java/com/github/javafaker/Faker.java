@@ -212,8 +212,13 @@ public class Faker {
         return numerify(fetchString("address.secondary_address"));
     }
 
+    public String emailFree() {
+        return fetchString("name.first_name") + "@" + fetchString("internet.free_email"); 
+    }
+
+    
     public String zipCode() {
-        return bothify(fetchString("address.postcode"));
+        return bothify(fetchString("address.us_postcode"));
     }
 
     public String streetSuffix() {
@@ -234,5 +239,9 @@ public class Faker {
 
     public String country() {
         return fetchString("address.country");
+    }
+
+    public String city() {
+        return fetchString("address.us_cities");
     }
 }

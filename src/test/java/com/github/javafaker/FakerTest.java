@@ -32,6 +32,10 @@ public class FakerTest {
         String name = faker.name();
         logger.info("Test name: " + name);
         Assert.assertNotNull(name);
+        
+        String city = faker.city();
+        logger.info("Test city: " + city);
+        Assert.assertNotNull(city);
     }
 
     @Test
